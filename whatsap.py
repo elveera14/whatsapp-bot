@@ -32,7 +32,29 @@ def scrapdata():
         input_box.send_keys(name + price + Keys.ENTER)
 
 #location of driver
-driver = webdriver.Chrome('/home/odoo/Hetal/chromedriver') 
+
+"""
+
+one can use any of the browsers driver
+i.e. Chrome, Firefox, IE
+
+e.g.
+
+## Chrome
+
+System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+WebDriver driver = new ChromeDriver();
+
+## Firefox
+
+System.setProperty("webdriver.firefox.driver", "/path/to/firefoxdriver");
+WebDriver driver = new FirefoxDriver();
+
+"""
+
+#add your path of chrome driver
+System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+WebDriver driver = new ChromeDriver();
 
 #open whasapweb
 driver.get("https://web.whatsapp.com/") 
